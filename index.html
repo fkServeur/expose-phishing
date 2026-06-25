@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Message reçu</title>
+    <style>
+        /* ===== RESET ===== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+            background: #1a1a2e;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        /* ===== CADRE TÉLÉPHONE ===== */
+        .phone-frame {
+            width: 375px;
+            max-width: 100%;
+            background: #ffffff;
+            border-radius: 40px;
+            padding: 20px 15px 30px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+            position: relative;
+        }
+
+        /* Encoche style iPhone */
+        .phone-notch {
+            width: 150px;
+            height: 30px;
+            background: #1a1a2e;
+            border-radius: 0 0 20px 20px;
+            margin: -20px auto 20px;
+        }
+
+        /* ===== EN-TÊTE SMS ===== */
+        .sms-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .sms-avatar {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background: #1877f2; /* Bleu Facebook */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .sms-info h4 {
+            font-size: 16px;
+            color: #1a1a2e;
+        }
+
+        .sms-info span {
+            font-size: 12px;
+            color: #888;
+        }
+
+        /* ===== BULLE SMS ===== */
+        .sms-bubble {
+            background: #e4e6eb;
+            padding: 14px 18px;
+            border-radius: 22px 22px 22px 6px;
+            max-width: 85%;
+            margin-bottom: 12px;
+            font-size: 15px;
+            line-height: 1.5;
+            color: #050505;
+        }
+
+        .sms-bubble strong {
+            color: #1877f2;
+        }
+
+        /* ===== LIEN PIÉGÉ ===== */
+        .phishing-link {
+            display: inline-block;
+            margin-top: 8px;
+            padding: 10px 20px;
+            background: #1877f2;
+            color: white !important;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        .phishing-link:hover {
+            background: #1558b0;
+        }
+
+        /* ===== CHAMP DE SAISIE SMS ===== */
+        .sms-input-area {
+            display: flex;
+            gap: 10px;
+            margin-top: 25px;
+            padding-top: 15px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .sms-input-area input {
+            flex: 1;
+            padding: 12px 16px;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 14px;
+            outline: none;
+        }
+
+        .sms-input-area input:focus {
+            border-color: #1877f2;
+        }
+
+        .sms-input-area button {
+            background: #1877f2;
+            color: white;
+            border: none;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .sms-input-area button:hover {
+            background: #1558b0;
+        }
+
+        /* ===== TIMESTAMP ===== */
+        .sms-timestamp {
+            font-size: 11px;
+            color: #999;
+            margin-bottom: 8px;
+        }
+
+        /* ===== NOTE PÉDAGOGIQUE EN BAS ===== */
+        .demo-note {
+            margin-top: 20px;
+            padding: 12px;
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 12px;
+            font-size: 13px;
+            color: #856404;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+<div class="phone-frame">
+
+    <!-- Encoche téléphone -->
+    <div class="phone-notch"></div>
+
+    <!-- Entête : expéditeur -->
+    <div class="sms-header">
+        <div class="sms-avatar">F</div>
+        <div class="sms-info">
+            <h4>Facebook</h4>
+            <span>Appareil inconnu · maintenant</span>
+        </div>
+    </div>
+
+    <!-- Timestamp -->
+    <div class="sms-timestamp">Aujourd'hui à 14:32</div>
+
+    <!-- Bulle SMS — le message piégé -->
+    <div class="sms-bubble">
+        <strong>Facebook</strong> 🛡️<br><br>
+        Nous avons détecté une tentative de connexion suspecte sur votre compte.<br><br>
+        Pour des raisons de sécurité, veuillez vérifier votre identité.<br><br>
+        <a href="fb-login.html" class="phishing-link">
+            ✓ Vérifier mon compte
+        </a>
+    </div>
+
+    <!-- Barre de réponse SMS (simulée) -->
+    <div class="sms-input-area">
+        <input type="text" placeholder="Répondre..." disabled>
+        <button disabled>➤</button>
+    </div>
+
+    <!-- Note pédagogique pour l'exposé -->
+    <div class="demo-note">
+        ⚠️ Démonstration pédagogique — Lien pointant vers <strong>fb-login.html</strong>
+    </div>
+
+</div>
+
+</body>
+</html>

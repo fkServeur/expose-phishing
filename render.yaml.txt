@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: expose-phishing
+    env: python
+    buildCommand: ""
+    startCommand: "bash start.sh"
+    disk:
+      name:data
+      mountPath: /var/data
+      sizeGB: 1

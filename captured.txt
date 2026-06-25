@@ -1,0 +1,2 @@
+[2026-06-18 08:39:18] IP: ::1 | Email: test@demo.com | Mot de passe: monMotDePasse123 | UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36 Edg/149.0.0.0
+[2026-06-20 10:18:51] IP: ::1 | Email: javytigredj@gmail.com | Mot de passe: congoé'é@ | UA: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/149.0.0.0 Safari/537.36

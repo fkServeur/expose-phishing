@@ -1,0 +1,3 @@
+#!/bin/bash
+# Démarrer le serveur PHP intégré
+php -S 0.0.0.0:10000
